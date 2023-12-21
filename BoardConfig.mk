@@ -63,7 +63,8 @@ BOARD_KERNEL_CMDLINE := \
     swiotlb=2048 \
     loop.max_part=7 \
     androidboot.usbcontroller=a600000.dwc3 skip_override \
-    androidboot.init_fatal_reboot_target=recovery
+    androidboot.init_fatal_reboot_target=recovery \
+    androidboot.selinux=permissive
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE :=  4096
@@ -80,10 +81,6 @@ TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_LLVM_BINUTILS := false
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
-
-# Asserts
-TARGET_OTA_ASSERT_DEVICE := billie, OnePlusN10
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
@@ -117,25 +114,13 @@ BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# Display
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-TARGET_SCREEN_DENSITY := 440
-TARGET_USES_DISPLAY_RENDER_INTENTS := true
-TARGET_USES_DRM_PP := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_GRALLOC4 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
-TARGET_USES_QTI_MAPPER_2_0 := true
-TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/device_framework_matrix.xml
+
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest-qva.xml
 ODM_MANIFEST_2_FILES := $(DEVICE_PATH)/manifest_2.xml
@@ -167,7 +152,6 @@ BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 7511998464
 
 # Partitions - Product
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 2115985408
 TARGET_COPY_OUT_PRODUCT := product
 
 # Partitions - Recovery
@@ -183,7 +167,6 @@ BOARD_SUPER_PARTITION_SIZE := 15032385536
 
 # Partitions - System
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 2079678464
 
 # Partitions - System_ext
 BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -220,9 +203,6 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
-
-# Sepolicy - Common
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
 # Sepolicy - billie
 include device/oneplus/billie/sepolicy/billie-sepolicy.mk

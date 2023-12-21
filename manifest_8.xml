@@ -44,15 +44,6 @@
             <instance>imsradio0</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.radio.qcriNvOpt</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IqcriNvOpt</name>
-            <instance>qcrinvopt0</instance>
-        </interface>
-    </hal>
     <!-- qcrilhook -->
     <hal format="hidl" override="true">
         <name>vendor.qti.hardware.radio.qcrilhook</name>

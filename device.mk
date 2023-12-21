@@ -24,9 +24,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 $(call inherit-product, vendor/oneplus/billie/billie-vendor.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
@@ -37,7 +34,6 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon \
     WifiResCommon \
     WifiResTarget \
-    OnePlusN10LineageSettings \
     OnePlusN10Frameworks \
     OnePlusN10Settings \
     OnePlusN10SettingsProvider \
@@ -83,8 +79,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
@@ -366,14 +360,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.billie
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.oneplus
-
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
@@ -473,7 +459,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -484,6 +470,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
+
+# QTI
+TARGET_BOARD_PLATFORM := lito
+
+TARGET_COMMON_QTI_COMPONENTS += \
+    alarm \
+    bt \
+    display \
+    media \
+    perf \
+    usb \
+    vibrator
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -512,7 +510,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     launch_sniffer.sh \
     qca6234-service.sh \
@@ -525,11 +522,9 @@ PRODUCT_PACKAGES += \
     init.oem_ftm.rc \
     init.oem_rf.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     init.uicc.rc \
-    init.usb.configfs.rc \
     vendor.oem_ftm.rc \
     vendor.oem_ftm_svc_disable.rc \
     ueventd.qcom.rc
@@ -560,16 +555,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oneplus
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -579,17 +567,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # WiFi
 PRODUCT_PACKAGES += \

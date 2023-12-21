@@ -66,7 +66,6 @@ persist.debug.coresight.config=stm-events
 config.disable_rtt=true
 
 # Media
-debug.stagefright.ccodec=1
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
 media.stagefright.enable-aac=true
