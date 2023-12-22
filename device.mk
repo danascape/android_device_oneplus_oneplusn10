@@ -487,6 +487,9 @@ PRODUCT_PACKAGES += \
 # QTI
 TARGET_BOARD_PLATFORM := lito
 
+TARGET_COMMON_QTI_COMPONENTS += \
+    perf
+
 # Radio
 PRODUCT_PACKAGES += \
     libavservices_minijail \
