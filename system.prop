@@ -36,9 +36,6 @@ persist.vendor.cne.feature=1
 # Dalvik
 dev.pm.dyn_samplingrate=1
 
-# Display (SF)
-debug.sf.enable_hwc_vds=1
-
 # Display (GFX)
 ro.gfx.driver.0=com.oneplus.gpudrivers.kona.api30
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
@@ -125,7 +122,3 @@ persist.vendor.sensors.enable.mag_filter=true
 
 # WiFI
 sys.qca1530=detect
-
-# WFD
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
