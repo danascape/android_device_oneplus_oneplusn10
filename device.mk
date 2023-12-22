@@ -364,7 +364,8 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.oneplusn10
+    android.hardware.lights-service.qti \
+    lights.qcom
 
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
