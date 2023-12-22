@@ -1570,9 +1570,6 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libwvhidl.so
 
-# WiFi
-vendor/bin/cnss-daemon
-
 # WiFi Display
 vendor/bin/wfdhdcphalservice
 vendor/bin/wfdvndservice
