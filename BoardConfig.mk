@@ -16,7 +16,7 @@
 
 BOARD_VENDOR := oneplus
 
-DEVICE_PATH := device/oneplus/billie
+DEVICE_PATH := device/oneplus/oneplusn10
 
 # Arch
 TARGET_ARCH := arm64
@@ -141,8 +141,8 @@ ODM_MANIFEST_10_FILES := $(DEVICE_PATH)/manifest_10.xml
 ODM_MANIFEST_SKUS += 2 8 10
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_billie
-TARGET_RECOVERY_DEVICE_MODULES := libinit_billie
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oneplusn10
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplusn10
 
 # Partitions - Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -221,8 +221,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Sepolicy - Common
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
-# Sepolicy - billie
-include device/oneplus/billie/sepolicy/billie-sepolicy.mk
+# Sepolicy - oneplusn10
+include device/oneplus/oneplusn10/sepolicy/oneplusn10-sepolicy.mk
 
 # Vendor security patch level
 VENDOR_SECURITY_PATCH := 2023-11-05
@@ -252,4 +252,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/oneplus/billie/BoardConfigVendor.mk
+include vendor/oneplus/oneplusn10/BoardConfigVendor.mk

@@ -15,9 +15,9 @@
 //
 
 cc_library_static {
-    name: "libinit_billie",
+    name: "libinit_oneplusn10",
     recovery_available: true,
-    srcs: ["init_billie.cpp"],
+    srcs: ["init_oneplusn10.cpp"],
     include_dirs: [
         "system/libbase/include",
         "system/core/init"

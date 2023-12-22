@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/oneplus/billie/billie-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplusn10/oneplusn10-vendor.mk)
 
 # Overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
-    device/oneplus/billie \
+    device/oneplus/oneplusn10 \
     hardware/oneplus
 
 # Screen density
@@ -364,7 +364,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.billie
+    android.hardware.light@2.0-service.oneplusn10
 
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
