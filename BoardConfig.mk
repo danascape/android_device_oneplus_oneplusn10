@@ -212,9 +212,6 @@ BOARD_USES_QCOM_HARDWARE := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Sepolicy - Common
-include device/qcom/sepolicy_vndr/SEPolicy.mk
-
 # Sepolicy - oneplusn10
 include device/oneplus/oneplusn10/sepolicy/oneplusn10-sepolicy.mk
 
