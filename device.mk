@@ -484,6 +484,9 @@ PRODUCT_PACKAGES += \
     libcurl.vendor:64 \
     libjsoncpp.vendor:64
 
+# QTI
+TARGET_BOARD_PLATFORM := lito
+
 # Radio
 PRODUCT_PACKAGES += \
     libavservices_minijail \
