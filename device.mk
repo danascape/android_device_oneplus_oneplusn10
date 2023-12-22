@@ -481,6 +481,7 @@ PRODUCT_COPY_FILES += \
 TARGET_BOARD_PLATFORM := lito
 
 TARGET_COMMON_QTI_COMPONENTS += \
+    alarm \
     perf
 
 # Radio
