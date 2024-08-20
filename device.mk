@@ -546,7 +546,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    fstab.zram
 
 # Seccomp
 PRODUCT_COPY_FILES += \
