@@ -16,9 +16,9 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.billie",
-    init_rc: ["android.hardware.light@2.0-service.billie.rc"],
-    vintf_fragments: ["android.hardware.light@2.0-service.billie.xml"],
+    name: "android.hardware.light@2.0-service.oneplusn10",
+    init_rc: ["android.hardware.light@2.0-service.oneplusn10.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.oneplusn10.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     vendor: true,
     shared_libs: [

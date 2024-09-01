@@ -12,7 +12,7 @@ fi
 set -e
 
 # Required!
-DEVICE=billie
+DEVICE=oneplusn10
 VENDOR=oneplus
 
 # Load extract_utils and do some sanity checks
