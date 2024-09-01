@@ -78,9 +78,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_CONFIG := vendor/billie-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm6350
 
-# Asserts
-TARGET_OTA_ASSERT_DEVICE := billie, OnePlusN10
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
