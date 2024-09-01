@@ -3,3 +3,7 @@ ro.charger.enable_suspend=1
 
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
+
+# Sensors
+ro.sensor.pickup=android.sensor.tilt_detector
+ro.sensor.pickup.value=0
