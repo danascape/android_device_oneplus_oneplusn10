@@ -297,8 +297,6 @@ PRODUCT_PACKAGES += \
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
     libsfplugin_ccodec
 
 # Media - Codecs
@@ -347,7 +345,6 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libmm-omxcore \
     libOmxCore \
     libOmxAacEnc \
@@ -356,8 +353,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
     libOmxVidcCommon \
 
 # OnePlus
