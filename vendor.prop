@@ -174,9 +174,5 @@ persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.debug.ssc_qmi_debug=true
 persist.vendor.sensors.odl.adsp=true
 
-# USB
-vendor.usb.diag.func.name=diag
-vendor.usb.use_ffs_mtp=0
-
 # Zygote
 zygote.critical_window.minute=10
