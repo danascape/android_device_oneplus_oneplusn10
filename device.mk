@@ -263,12 +263,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.visibility_control@1.0 \
     android.hardware.gnss.visibility_control@1.0.vendor \
 
-# Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery
-
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
@@ -425,6 +419,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     alarm \
     av \
     bt \
+    charger \
     display \
     gps \
     media \
