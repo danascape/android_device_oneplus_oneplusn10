@@ -400,7 +400,6 @@ TARGET_COMMON_QTI_COMPONENTS += \
     bt \
     charger \
     display \
-    dsprpcd \
     gps \
     media \
     perf \
