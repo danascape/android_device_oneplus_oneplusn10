@@ -242,7 +242,6 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
     libion.vendor
 
 # GPS
@@ -281,10 +280,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fpc1020.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fpc1020.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
 
 # Media - Codec2 modules
 PRODUCT_PACKAGES += \
@@ -394,6 +389,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     charging \
     display \
     gps \
+    keymaster \
     media \
     perf \
     qseecomd \
