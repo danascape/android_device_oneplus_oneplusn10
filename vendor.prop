@@ -139,14 +139,10 @@ persist.sys.fuse.passthrough.enable=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Priv-app Permissions
-ro.control_privapp_permissions=enforce
-
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
 
 # Radio
-persist.radio.multisim.config=dsds
 persist.vendor.radio.5g_mode_pref=1
 persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
@@ -159,10 +155,6 @@ persist.vendor.radio.efssync=true
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.uicc_se_enabled=true
-persist.vendor.radio.apm_sim_not_pwdn=1
-persist.vendor.radio.sib16_support=1
-persist.vendor.radio.custom_ecc=1
-persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.rat_on=combine
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so

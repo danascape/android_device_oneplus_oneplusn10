@@ -186,9 +186,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
 # Sepolicy - oneplusn10
 include device/oneplus/oneplusn10/sepolicy/oneplusn10-sepolicy.mk
 
