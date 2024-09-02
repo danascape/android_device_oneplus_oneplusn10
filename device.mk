@@ -425,6 +425,7 @@ TARGET_COMMON_QTI_COMPONENTS += \
     gps \
     media \
     perf \
+    qseecomd \
     usb \
     vibrator \
     wfd
