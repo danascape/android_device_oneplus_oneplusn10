@@ -108,7 +108,7 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest-qva.xml
 ODM_MANIFEST_2_FILES := $(DEVICE_PATH)/manifest_2.xml
