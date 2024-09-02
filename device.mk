@@ -248,13 +248,7 @@ PRODUCT_PACKAGES += \
     libion.vendor
 
 # GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1 \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss.measurement_corrections@1.1 \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0 \
-    android.hardware.gnss.visibility_control@1.0.vendor \
+LOC_HIDL_VERSION = 4.0
 
 # HIDL
 PRODUCT_PACKAGES += \
