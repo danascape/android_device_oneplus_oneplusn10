@@ -937,6 +937,11 @@ vendor/lib64/ls_client.so
 
 # Sensors
 vendor/etc/sensors/hals.conf
+vendor/lib64/libasn1cper.so
+vendor/lib64/libasn1crt.so
+vendor/lib64/libasn1crtx.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/sensors.ssc.so
 
 # Sensor-configs
 vendor/etc/sensors/config/billie_qrd_bmi160_0.json
@@ -1106,7 +1111,6 @@ vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
 vendor/etc/sensors/sns_reg_config
 
 # Snapdragon Computer Vision Engine
-vendor/lib/libfastcvdsp_stub.so
 vendor/lib/libscveCommon.so
 vendor/lib/libscveCommon_stub.so
 vendor/lib/libscveObjectSegmentation.so
@@ -1115,7 +1119,6 @@ vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
 vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/lib64/libfastcvdsp_stub.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
