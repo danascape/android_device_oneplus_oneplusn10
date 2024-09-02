@@ -72,7 +72,6 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-vendor.mm.enable.qcom_parser=16711679
 persist.mm.enable.prefetch=true
 ro.media.recorder-max-base-layer-fps = 60
 
