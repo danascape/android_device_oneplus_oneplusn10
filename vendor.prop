@@ -98,10 +98,7 @@ ro.hardware.keystore_desede=true
 
 # Display
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30
-ro.hardware.vulkan=adreno
-ro.hardware.egl=adreno
 ro.vendor.display.sensortype=2 
-vendor.opengles.version=196610
 
 # Dalvik
 dalvik.vm.heapstartsize=8m
