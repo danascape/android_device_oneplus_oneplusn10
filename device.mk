@@ -478,9 +478,6 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # WiFi
-PRODUCT_PACKAGES += \
-    wifi-mac-generator
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/sar-vendor-cmd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/sar-vendor-cmd.xml \
