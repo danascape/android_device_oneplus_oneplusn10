@@ -47,8 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
-    device/oneplus/billie \
-    hardware/oneplus
+    device/oneplus/billie
 
 # Screen density
 TARGET_SCREEN_HEIGHT := 2400
